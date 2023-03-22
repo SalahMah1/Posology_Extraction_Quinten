@@ -55,14 +55,10 @@ coverage.xml
 *.mo
 *.pot
 
-# Input and Output file
-Inputs/*
-Outputs/DataAugmented/*
-Outputs/Evaluation/*
-Outputs/Model/*
-Outputs/Predictions/*
-Outputs/Preprocessed/*
-
+# Input and Output files
+*.sav
+*.csv
+*.jsonl
 
 # Django stuff:
 *.log
