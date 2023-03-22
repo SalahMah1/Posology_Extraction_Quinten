@@ -1,0 +1,57 @@
+{	
+"paths":{"Inputs_path" : "../Inputs/",
+"input_file" : "data_training_labeled.jsonl",
+"drug_database_file": "drug_database.csv",
+"vidal_substancedile":"vidal_substances.csv",
+"Outputs_path":"../Outputs/",
+"post_doccano_file":"post_docanno_processed.csv",
+"folder_preprocessed":"Preprocessed/",
+"folder_models":"Model/",
+"folder_data_augmented":"DataAugmented/",
+"data_augmented_method_3_file": "data_augmentation3.csv",
+"folder_evaluations":"Evaluation/",
+"evaluation_loss_file":"evaluation_loss.png",
+"evaluation_f1_file" : "evaluation_f1.png"
+},
+
+"labels":{"labels_name" : ["DOSAGE", "DRUG", "DURATION", "FORM", "FREQUENCY","COMMON", "ROUTE", "TREATMENT"],
+  "LABEL0" : "COMMON",
+  "LABEL1" : "DOSAGE",
+  "LABEL2" : "DRUG",
+  "LABEL3" : "DURATION",
+  "LABEL4" : "FORM",
+  "LABEL5" : "FREQUENCY",
+  "LABEL6" : "ROUTE",
+  "LABEL7" : "TREATMENT"
+},
+
+"padding":{"tokenizer_model": "camembert-base",
+"MAXLEN" : 268,
+"dtype" : "long",
+"truncating" : "post",
+"padding" : "post",
+"val_pad_text" :  0.0,
+"val_pad_label" : 8
+},
+
+"train_test_split":{"random_state" : 2018,
+"test_size" : 0.15,
+"batch_size" : 32
+},
+
+"model":{"model_name": "camembert-base",
+"num_labels" : 9,
+"output_attentions" : false,
+"output_hidden_states" : false,
+"weight_decay_rate_1" : 0.01,
+"weight_decay_rate_2" : 0.0,
+"full_fine_tuning" : true,
+"learning_rate" : 3e-5,
+"eps" : 1e-8,
+"epochs" : 100,
+"max_grad_norm" : 1.0,
+"num_warmup_steps" : 0,
+"f1_metric" : "macro",
+"tag_values" : ["COMMON", "DOSAGE", "DRUG", "DURATION", "FORM", "FREQUENCY", "ROUTE", "TREATMENT", "PAD"]
+}
+}
